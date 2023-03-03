@@ -1,0 +1,79 @@
+@import '../styles/_variables.scss';
+
+// Container
+@mixin container {
+  max-width: 1236px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+// Buttons
+@mixin btn {
+  padding: 11px 50px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 19.2px;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+}
+
+@mixin mainBtn {
+  @include btn;
+  color: $third-color;
+  background-color: transparent;
+  border: 2px solid $third-color;
+
+  &:hover {
+    color: $third-color;
+    background-color: $main-color;
+    border-color: $main-color;
+  }
+}
+
+@mixin secondBtn {
+  @include btn;
+  color: $third-color;
+  background-color: $main-color;
+  border: 2px solid $main-color;
+
+  &:hover {
+    background-color: $main-light-color;
+    border-color: $main-light-color;
+  }
+}
+
+@mixin productBtn {
+  @include btn;
+  padding: 8px 24px;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 16.8px;
+  color: $main-light-color;
+  background-color: transparent;
+  border: 1px solid $main-light-color;
+  border-color: $main-light-color;
+  border-radius: 5px;
+
+  &:hover {
+    color: $third-color;
+    background-color: $main-light-color;
+  }
+}
+
+// Section title
+@mixin sectionTitle {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 50.4px;
+  color: $main-color;
+
+  @media (max-width: $mobile) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @media (max-width: $small_mobile) {
+    font-size: 27px;
+  }
+}

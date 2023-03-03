@@ -1,0 +1,96 @@
+@import '../../styles/_mixins.scss';
+@import '../../styles/_variables.scss';
+
+.header {
+  width: 100%;
+  padding: 37px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (max-width: $tablet) {
+    padding: 27px 0;
+  }
+  @media (max-width: $mobile) {
+    padding: 17px 0;
+  }
+
+  .container {
+    @include container;
+
+    .content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .contentImage {
+        flex-grow: 1;
+
+        .contentImageImg {
+
+        }
+      }
+
+      .contentNav {
+        @media (max-width: $tablet) {
+          display: none;
+        }
+
+        .contentNavList {
+          margin-right: 67px;
+          display: flex;
+
+          .contentNavListItem {
+            margin-right: 50px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            .contentNavListItemLink {
+              position: relative;
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 21.6px;
+              color: $third-color;
+
+              &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 100%;
+                height: 2px;
+                background: $third-color;
+                opacity: 0;
+                transition: opacity .2s ease-in-out;
+              }
+
+              &:hover:after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .contentButton {
+        @include mainBtn;
+
+        @media (max-width: $tablet) {
+          display: none;
+        }
+      }
+
+      .contentBurgerMenu {
+        display: none;
+        border: none;
+        background-color: transparent;
+
+        @media (max-width: $tablet) {
+          display: block;
+        }
+      }
+    }
+  }
+}

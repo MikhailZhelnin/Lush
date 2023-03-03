@@ -1,0 +1,138 @@
+@import '../../styles/_mixins.scss';
+@import '../../styles/_variables.scss';
+
+.varieties {
+  margin-bottom: 80px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: $small_mobile) {
+    margin-bottom: 0;
+  }
+
+  .container {
+    @include container;
+
+    .content {
+
+      .contentHeader {
+        margin-bottom: 90px;
+        display: flex;
+
+        @media (max-width: $mobile) {
+          flex-direction: column;
+          margin-bottom: 50px;
+        }
+        @media (max-width: 700px) {
+          margin-bottom: 0;
+        }
+
+        .contentHeaderTitle {
+          padding-right: 15px;
+          width: 50%;
+
+          h2 {
+            @include sectionTitle;
+            letter-spacing: 2px;
+          }
+
+          @media (max-width: $mobile) {
+            margin-bottom: 15px;
+            padding-right: 0;
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        .contentHeaderText {
+          padding-left: 15px;
+          width: 50%;
+          font-size: 18px;
+          line-height: 27px;
+          color: $secondary-color;
+
+          @media (max-width: $mobile) {
+            padding-left: 0;
+            width: 100%;
+            text-align: center;
+          }
+          @media (max-width: $small_mobile) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .contentList {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 700px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .contentListItem {
+          max-width: 350px;
+          width: 100%;
+          padding: 50px;
+          display: flex;
+          flex-direction: column;
+
+          @media (max-width: $tablet) {
+            padding: 30px;
+          }
+          @media (max-width: 700px) {
+            padding: 20px;
+            max-width: 80%;
+
+            &:nth-child(1) {
+              margin-bottom: 15px;
+            }
+          }
+          @media (max-width: $small_mobile) {
+            max-width: 100%;
+          }
+
+          &:nth-child(2) {
+            background-color: $main-light-color;
+            border-radius: 10px;
+
+            .contentListItemTitle {
+              font-size: 20px;
+              font-weight: 900;
+              line-height: 28px;
+              color: $third-color;
+            }
+
+            .contentListItemText {
+              font-size: 16px;
+              line-height: 24px;
+              color: $third-darker-color;
+            }
+          }
+
+          .contentListItemImage {
+            height: 126px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-end;
+          }
+
+          .contentListItemTitle {
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 28px;
+          }
+
+          .contentListItemText {
+            font-size: 16px;
+            line-height: 24px;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}

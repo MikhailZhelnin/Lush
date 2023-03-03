@@ -1,0 +1,35 @@
+@import '../../styles/_mixins.scss';
+@import '../../styles/_variables.scss';
+
+.blogs {
+  margin-bottom: 120px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 80px;
+  }
+  @media (max-width: $small_mobile) {
+    margin-bottom: 50px;
+  }
+
+  .container {
+    @include container;
+
+    .content {
+      .contentTitle {
+        @include sectionTitle;
+        margin-bottom: 35px;
+        text-align: center;
+      }
+
+      .contentList {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 767px) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

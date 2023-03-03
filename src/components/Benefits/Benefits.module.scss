@@ -1,0 +1,92 @@
+@import '../../styles/_mixins.scss';
+@import '../../styles/_variables.scss';
+
+.benefits {
+  margin-bottom: 120px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 80px;
+  }
+  @media (max-width: $small_mobile) {
+    margin-bottom: 50px;
+  }
+
+  .content {
+    display: flex;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+
+    .contentLeft {
+      width: 50%;
+
+      @media (max-width: $mobile) {
+        width: 100%;
+        height: 40vh;
+      }
+
+      .contentLeftImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .contentRight {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (max-width: $tablet) {
+        flex-direction: column;
+      }
+
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
+
+      .contentRightItem {
+        padding: 60px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: $third-medium-color;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          background-color: $third-darker-color;
+        }
+
+        @media (max-width: $tablet) {
+          padding: 0 40px 40px;
+          width: 100%;
+        }
+
+        @media (max-width: $mobile) {
+          padding: 0 18px 18px;
+        }
+
+        .contentRightItemIcon {
+          margin-bottom: 10px;
+          height: 126px;
+          display: flex;
+          align-items: flex-end;
+        }
+
+        .contentRightItemTitle {
+          margin-bottom: 10px;
+          font-size: 20px;
+          font-weight: 900;
+          line-height: 28px;
+        }
+
+        .contentRightItemText {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
