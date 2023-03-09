@@ -1,13 +1,14 @@
-import {IBlog} from "../../../models";
+import BlogItem from "./Blog/BlogItem";
+
+import {IBlog} from "@/global/interfaces/IBlog";
 
 import styles from './Blogs.module.scss'
-import BlogItem from "./Blog/BlogItem";
 
 interface BlogsProps {
   blogs: IBlog[],
 }
 
-const Blog = ({blogs}: BlogsProps) => {
+export const Blogs = ({blogs}: BlogsProps) => {
   return (
     <section className={styles.blogs}>
       <div className={styles.container}>
@@ -23,5 +24,3 @@ const Blog = ({blogs}: BlogsProps) => {
     </section>
   )
 }
-
-export default Blog;

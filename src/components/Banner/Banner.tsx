@@ -1,8 +1,10 @@
-import styles from './Banner.module.scss'
 import Image from "next/image";
+
 import {icons} from "../../../public/assets/icons/icons";
 
-const Banner = () => {
+import styles from './Banner.module.scss'
+
+export const Banner = () => {
   return (
     <div className={styles.banner}>
       <div className={styles.container}>
@@ -24,5 +26,3 @@ const Banner = () => {
     </div>
   )
 }
-
-export default Banner;

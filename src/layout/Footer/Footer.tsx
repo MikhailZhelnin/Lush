@@ -1,59 +1,11 @@
-import {icons} from "../../../public/assets/icons/icons";
-import {ISiteMenu, ISocials} from "../../../models";
-
-import styles from './Footer.module.scss'
 import Link from "next/link";
 import Image from "next/image";
 
-const socialsData: ISocials[] = [
-  {
-    id: 1,
-    icon: icons.instagram,
-    link: 'https://www.instagram.com',
-  },
-  {
-    id: 2,
-    icon: icons.facebook,
-    link: 'https://www.facebook.com',
-  },
-  {
-    id: 3,
-    icon: icons.twitter,
-    link: 'https://twitter.com',
-  },
-];
-const siteMenuData: ISiteMenu[] = [
-  {
-    id: 1,
-    name: 'Home',
-    link: '/',
-  },
-  {
-    id: 2,
-    name: 'About Us',
-    link: '/',
-  },
-  {
-    id: 3,
-    name: 'Plants',
-    link: '/',
-  },
-  {
-    id: 4,
-    name: 'Delivery',
-    link: '/',
-  },
-  {
-    id: 5,
-    name: 'Blog',
-    link: '/',
-  },
-  {
-    id: 6,
-    name: 'Contact Us',
-    link: '/',
-  },
-];
+import {icons} from "../../../public/assets/icons/icons";
+
+import {siteMenuData, socialsData} from "@/data";
+
+import styles from './Footer.module.scss'
 
 const Footer = () => {
   return (

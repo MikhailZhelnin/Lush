@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import {ITestimonials} from "../../../models";
+import {ITestimonials} from "../../global/interfaces/others";
 
 import styles from './Testimonials.module.scss'
 
@@ -8,7 +8,7 @@ interface TestimonialsProps {
     testimonialsData: ITestimonials[],
 }
 
-const Testimonials = ({testimonialsData}: TestimonialsProps) => {
+export const Testimonials = ({testimonialsData}: TestimonialsProps) => {
     return (
         <section className={styles.testimonials}>
           <div className={styles.container}>
@@ -35,5 +35,3 @@ const Testimonials = ({testimonialsData}: TestimonialsProps) => {
         </section>
     )
 }
-
-export default Testimonials;

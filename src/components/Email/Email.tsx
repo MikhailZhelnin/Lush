@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import styles from './Email.module.scss'
 
-const Email = () => {
+export const Email = () => {
 
     const [email, setEmail] = useState('');
 
@@ -33,5 +33,3 @@ const Email = () => {
         </div>
     )
 }
-
-export default Email;

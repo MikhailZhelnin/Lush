@@ -1,18 +1,3 @@
-export interface IProduct {
-  id: number
-  image: string
-  title: string
-  price: number
-}
-
-export interface IBlog {
-  id: number
-  image: string
-  title: string
-  text: string
-  created: string
-}
-
 export interface IVarieties {
   id: number
   icon: string
@@ -46,4 +31,3 @@ export interface ISiteMenu {
   name: string
   link: string
 }
-

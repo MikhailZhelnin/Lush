@@ -1,5 +1,6 @@
-import {IVarieties} from "../../../models";
 import Image from "next/image";
+
+import {IVarieties} from "../../global/interfaces/others";
 
 import styles from './Varieties.module.scss'
 
@@ -7,7 +8,7 @@ interface VarietiesProps {
   varieties: IVarieties[],
 }
 
-const Varieties = ({varieties}: VarietiesProps) => {
+export const Varieties = ({varieties}: VarietiesProps) => {
   return (
     <section className={styles.varieties}>
       <div className={styles.container}>
@@ -42,5 +43,3 @@ const Varieties = ({varieties}: VarietiesProps) => {
     </section>
   )
 }
-
-export default Varieties;

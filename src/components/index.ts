@@ -1,0 +1,7 @@
+export * from '../components/Banner/Banner'
+export * from '../components/Varieties/Varieties'
+export * from '../components/Offer/Offer'
+export * from '../components/Benefits/Benefits'
+export * from '../components/Testimonials/Testimonials'
+export * from '../components/Email/Email'
+export * from '../components/Blogs/Blogs'

@@ -1,10 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import imageUrlBuilder from '@sanity/image-url'
+import client from '../../../../client'
+
+import {IBlog} from "@/global/interfaces/IBlog";
 
 import {icons} from "../../../../public/assets/icons/icons";
-import {IBlog} from "../../../../models";
 
 import styles from './BlogItem.module.scss'
+
+function urlFor (source: any) {
+  return imageUrlBuilder(client).image(source)
+}
 
 interface BlogItemProps {
   blog: IBlog,
@@ -14,7 +21,7 @@ const BlogItem = ({blog}: BlogItemProps) => {
   return (
     <div className={styles.blogItem}>
       <div className={styles.blogItemImage}>
-        <Image src={blog.image} alt={blog.title}/>
+        <img src={urlFor(blog.image).url()} alt={blog.title}/>
       </div>
       <h3 className={styles.blogItemTitle}>{blog.title}</h3>
       <div className={styles.blogItemText}>

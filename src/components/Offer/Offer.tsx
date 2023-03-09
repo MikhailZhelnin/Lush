@@ -1,15 +1,14 @@
-import {IProduct} from "../../../models";
+import OfferItem from "@/components/Offer/OfferItem/OfferItem";
+
+import {IProduct} from "@/global/interfaces/IProduct";
 
 import styles from './Offer.module.scss'
-
-import OfferItem from "@/components/Offer/OfferItem/OfferItem";
 
 interface OfferProps {
   products: IProduct[],
 }
 
-const Offer = ({products}: OfferProps) => {
-
+export const Offer = ({products}: OfferProps) => {
   return (
     <section className={styles.offer}>
       <div className={styles.container}>
@@ -25,5 +24,3 @@ const Offer = ({products}: OfferProps) => {
     </section>
   )
 }
-
-export default Offer;
