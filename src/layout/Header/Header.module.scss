@@ -8,6 +8,10 @@
   top: 0;
   left: 0;
 
+  &.headerColor {
+    background-color: #9CADAA;
+  }
+
   @media (max-width: $tablet) {
     padding: 27px 0;
   }
@@ -71,6 +75,22 @@
               }
             }
           }
+        }
+      }
+
+      .contentSavedItems {
+        display: flex;
+        margin-right: 20px;
+        padding: 8px 10px;
+        border-radius: 50px;
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+          background-color: #849491;
+        }
+
+        @media (max-width: $tablet) {
+          //display: none;
         }
       }
 

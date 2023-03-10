@@ -5,9 +5,13 @@ import {icons} from "../../../public/assets/icons/icons";
 
 import styles from './Header.module.scss'
 
-const Header = () => {
+interface HeaderProps {
+  headerMain: boolean
+}
+
+const Header = ({headerMain}: HeaderProps) => {
   return (
-    <header className={styles.header}>
+    <header className={headerMain ? styles.header : `${styles.header} ${styles.headerColor}`}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.contentImage}>
@@ -29,6 +33,15 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+          <Link href='/saved-items' className={styles.contentSavedItems}>
+            <Image
+              src={icons.heart_outlined_white}
+              alt='Saved items'
+              width={35}
+              height={35}
+              className={styles.contentSavedItemsImage}
+            />
+          </Link>
           <button className={styles.contentButton}>Call Us</button>
           <button className={styles.contentBurgerMenu}>
             <Image src={icons.burger_menu} alt='Burger menu'/>

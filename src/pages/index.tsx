@@ -22,7 +22,7 @@ export default function Home(props: HomeProps) {
   const {products, blogs} = props;
 
   return (
-    <Main meta={<Meta title="Lush Home" description="Lush home page"/>}>
+    <Main headerMain={true} meta={<Meta title="Lush Home" description="Lush home page"/>}>
       <Banner/>
       <Varieties varieties={varietiesData}/>
       <Offer products={products}/>

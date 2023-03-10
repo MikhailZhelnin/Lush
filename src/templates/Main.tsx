@@ -9,6 +9,7 @@ import styles from './Main.module.scss'
 type IMainProps = {
   meta: ReactNode
   children: ReactNode
+  headerMain: boolean
 }
 
 const lato = Lato({
@@ -16,14 +17,14 @@ const lato = Lato({
   subsets: ['latin'],
 })
 
-const Main = (props: IMainProps) => {
+const Main = ({meta, children, headerMain}: IMainProps) => {
   return (
     <div className={`${styles.main} ${lato.className}`}>
-      {props.meta}
+      {meta}
 
-      <Header />
+      <Header headerMain={headerMain}/>
 
-      <main>{props.children}</main>
+      <main className={styles.mainContent}>{children}</main>
 
       <Footer/>
 

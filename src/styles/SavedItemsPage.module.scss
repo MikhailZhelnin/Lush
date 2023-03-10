@@ -1,0 +1,33 @@
+@import '../styles/_mixins.scss';
+
+.savedItems {
+  padding-top: 141px;
+
+  @media (max-width: $mobile) {
+    padding-top: 101px;
+  }
+
+  .container {
+    @include container;
+
+    .content {
+      padding: 30px 0;
+
+      .contentTitle {
+        @include sectionTitle;
+        margin-bottom: 35px;
+        text-align: center;
+      }
+
+      .contentList {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: $medium_mobile) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

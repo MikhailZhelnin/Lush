@@ -8,6 +8,7 @@ export const icons = {
     pots: require('./variety-pots.svg').default,
   },
   heart_outlined: require('./heart-outlined.svg').default,
+  heart_outlined_white: require('./heart-outlined-white.svg').default,
   heart_filled: require('./heart-filled.svg').default,
   benefits: {
     quality: require('./benefits-quality.svg').default,
