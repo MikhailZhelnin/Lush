@@ -1,0 +1,45 @@
+@import '../../styles/_mixins.scss';
+@import '../../styles/_variables.scss';
+
+.mobileMenu {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #285A43;
+  color: white;
+
+  .mobileMenuList {
+    margin-bottom: 10px;
+    text-align: center;
+
+    .mobileMenuListItem {
+      margin-bottom: 15px;
+
+      .mobileMenuListItemLink {
+        font-size: 27px;
+      }
+    }
+  }
+
+  .mobileMenuCallusButton {
+    @include mainBtn;
+  }
+
+  .mobileMenuCLose {
+    position: absolute;
+    top: 42px;
+    right: 22px;
+    font-size: 30px;
+    color: white;
+    border: none;
+    background-color: transparent;
+
+    @media (max-width: $mobile) {
+      top: 33px
+    }
+  }
+}
