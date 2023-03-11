@@ -1,0 +1,46 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
+.blog {
+  padding-top: 141px;
+
+  @media (max-width: $mobile) {
+    padding-top: 101px;
+  }
+
+  .container {
+    @include container;
+
+    .content {
+      padding: 80px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media (max-width: $small_mobile) {
+        padding: 50px 0;
+      }
+
+      .contentImage {
+        margin-bottom: 15px;
+        border-radius: 15px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+      .contentTitle {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      .contentText {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      .contentCreated {
+
+      }
+    }
+  }
+}

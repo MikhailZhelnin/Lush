@@ -25,14 +25,14 @@ const BlogItem = ({blog}: BlogItemProps) => {
       </div>
       <h3 className={styles.blogItemTitle}>{blog.title}</h3>
       <div className={styles.blogItemText}>
-        <p>{blog.text}</p>
+        <p>{blog.text.slice(0, 150)}...</p>
       </div>
       <div className={styles.blogItemFooter}>
         <div className={styles.blogItemFooterDate}>
           <Image src={icons.calendar} alt='Calendar'/>
           <span>{blog.created}</span>
         </div>
-        <Link href='/' className={styles.blogItemFooterLink}>
+        <Link href={`/blogs/${blog.id}`} className={styles.blogItemFooterLink}>
           <span>Read More</span>
           <Image src={icons.arrow_right} alt='Arrow right'/>
         </Link>
